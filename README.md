@@ -7,7 +7,7 @@ APPARATUS REQUIRED:
 VIVADO 2023.1 software
 
 PROCEDURE:
-```
+
 1. Open Vivado: Launch Xilinx Vivado software on your computer.
 
 2. Create a New Project: Click on "Create Project" from the welcome page or navigate through "File" > "Project" > "New".
@@ -33,7 +33,7 @@ ENCODER
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
 VERILOG CODE:
-
+```
 module encoder(d,y);
 input[7:0]d;
 output[2:0]y;
@@ -42,7 +42,7 @@ or g2(y[1],d[7],d[6],d[3],d[2]);
 or g3(y[2],d[7],d[5],d[3],d[1]);
 endmodule
 
-
+```
 OUTPUT:
 
 ![image](https://github.com/Siva1309/VLSI-LAB-EXP-2/assets/166374356/10d0dd41-f0dd-4ae5-b415-b5e352a7ea81)
@@ -53,7 +53,7 @@ DECODER
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
 
 VERILOG CODE:
-
+```
 module decoder(a,b,c,y);
 input a,b,c;
 output [7:0]y;
@@ -70,7 +70,7 @@ and g9(y[5],a,w2,c);
 and g10(y[6],a,b,w3);
 and g11(y[7],a,b,c);
 endmodule
-
+```
 
 OUTPUT:
 
@@ -82,7 +82,7 @@ MULTIPLEXER
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
 
 VERILOG CODE:
-
+```
 module multiplexer(s0,s1,s2,d,y);
 input[7:0]d;
 input s0,s1,s2;
@@ -101,7 +101,7 @@ and g10(w9,d[6],s0,s1,w2);
 and g11(w10,d[7],s0,s1,s2);
 or g12(y,w3,w4,w5,w6,w7,w8,w9,w10);
 endmodule
-
+```
 
 OUTPUT:
 
@@ -113,7 +113,7 @@ DEMULTIPLEXER
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
 
 VERILOG CODE:
-
+```
 module demux(s,d,y);
 input d;
 input [2:0]s;
@@ -131,7 +131,7 @@ and g9(y[5],d,s[2],s[0],w2);
 and g10(y[6],d,w1,s[1],s[2]);
 and g11(y[7],d,s[2],s[1],s[0]);
 endmodule
-
+```
 
 OUTPUT:
 
@@ -143,7 +143,7 @@ MAGNITUDE COMPARATOR
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
 VERILOG CODE:
-
+```
 module magnitude(a,b,great,less,equal);
 input[1:0]a,b;
 output reg great,less,equal;
@@ -169,7 +169,7 @@ equal=1'b1;
 end 
 end 
 endmodule
-
+```
 
 OUTPUT:
 
